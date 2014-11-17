@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB002FCF1A1A05D0009217EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB002FCE1A1A05D0009217EF /* main.m */; };
+		FB002FD21A1A05D0009217EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB002FD11A1A05D0009217EF /* AppDelegate.m */; };
+		FB002FD51A1A05D0009217EF /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB002FD41A1A05D0009217EF /* MasterViewController.m */; };
+		FB002FD81A1A05D0009217EF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB002FD71A1A05D0009217EF /* DetailViewController.m */; };
+		FB002FDB1A1A05D0009217EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB002FD91A1A05D0009217EF /* Main.storyboard */; };
+		FB002FDD1A1A05D1009217EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB002FDC1A1A05D1009217EF /* Images.xcassets */; };
+		FB002FE01A1A05D1009217EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB002FDE1A1A05D1009217EF /* LaunchScreen.xib */; };
+		FB002FEC1A1A05D1009217EF /* HayContactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB002FEB1A1A05D1009217EF /* HayContactsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB002FE61A1A05D1009217EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB002FC11A1A05D0009217EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB002FC81A1A05D0009217EF;
+			remoteInfo = HayContacts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB002FC91A1A05D0009217EF /* HayContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HayContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB002FCD1A1A05D0009217EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB002FCE1A1A05D0009217EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB002FD01A1A05D0009217EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FB002FD11A1A05D0009217EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FB002FD31A1A05D0009217EF /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		FB002FD41A1A05D0009217EF /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		FB002FD61A1A05D0009217EF /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		FB002FD71A1A05D0009217EF /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		FB002FDA1A1A05D0009217EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB002FDC1A1A05D1009217EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FB002FDF1A1A05D1009217EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FB002FE51A1A05D1009217EF /* HayContactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HayContactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB002FEA1A1A05D1009217EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB002FEB1A1A05D1009217EF /* HayContactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HayContactsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB002FC61A1A05D0009217EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB002FE21A1A05D1009217EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB002FC01A1A05D0009217EF = {
+			isa = PBXGroup;
+			children = (
+				FB002FCB1A1A05D0009217EF /* HayContacts */,
+				FB002FE81A1A05D1009217EF /* HayContactsTests */,
+				FB002FCA1A1A05D0009217EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB002FCA1A1A05D0009217EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB002FC91A1A05D0009217EF /* HayContacts.app */,
+				FB002FE51A1A05D1009217EF /* HayContactsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB002FCB1A1A05D0009217EF /* HayContacts */ = {
+			isa = PBXGroup;
+			children = (
+				FB002FD01A1A05D0009217EF /* AppDelegate.h */,
+				FB002FD11A1A05D0009217EF /* AppDelegate.m */,
+				FB002FD31A1A05D0009217EF /* MasterViewController.h */,
+				FB002FD41A1A05D0009217EF /* MasterViewController.m */,
+				FB002FD61A1A05D0009217EF /* DetailViewController.h */,
+				FB002FD71A1A05D0009217EF /* DetailViewController.m */,
+				FB002FD91A1A05D0009217EF /* Main.storyboard */,
+				FB002FDC1A1A05D1009217EF /* Images.xcassets */,
+				FB002FDE1A1A05D1009217EF /* LaunchScreen.xib */,
+				FB002FCC1A1A05D0009217EF /* Supporting Files */,
+			);
+			path = HayContacts;
+			sourceTree = "<group>";
+		};
+		FB002FCC1A1A05D0009217EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB002FCD1A1A05D0009217EF /* Info.plist */,
+				FB002FCE1A1A05D0009217EF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB002FE81A1A05D1009217EF /* HayContactsTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB002FEB1A1A05D1009217EF /* HayContactsTests.m */,
+				FB002FE91A1A05D1009217EF /* Supporting Files */,
+			);
+			path = HayContactsTests;
+			sourceTree = "<group>";
+		};
+		FB002FE91A1A05D1009217EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB002FEA1A1A05D1009217EF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB002FC81A1A05D0009217EF /* HayContacts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB002FEF1A1A05D1009217EF /* Build configuration list for PBXNativeTarget "HayContacts" */;
+			buildPhases = (
+				FB002FC51A1A05D0009217EF /* Sources */,
+				FB002FC61A1A05D0009217EF /* Frameworks */,
+				FB002FC71A1A05D0009217EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HayContacts;
+			productName = HayContacts;
+			productReference = FB002FC91A1A05D0009217EF /* HayContacts.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB002FE41A1A05D1009217EF /* HayContactsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB002FF21A1A05D1009217EF /* Build configuration list for PBXNativeTarget "HayContactsTests" */;
+			buildPhases = (
+				FB002FE11A1A05D1009217EF /* Sources */,
+				FB002FE21A1A05D1009217EF /* Frameworks */,
+				FB002FE31A1A05D1009217EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB002FE71A1A05D1009217EF /* PBXTargetDependency */,
+			);
+			name = HayContactsTests;
+			productName = HayContactsTests;
+			productReference = FB002FE51A1A05D1009217EF /* HayContactsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB002FC11A1A05D0009217EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = javi;
+				TargetAttributes = {
+					FB002FC81A1A05D0009217EF = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					FB002FE41A1A05D1009217EF = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = FB002FC81A1A05D0009217EF;
+					};
+				};
+			};
+			buildConfigurationList = FB002FC41A1A05D0009217EF /* Build configuration list for PBXProject "HayContacts" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB002FC01A1A05D0009217EF;
+			productRefGroup = FB002FCA1A1A05D0009217EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB002FC81A1A05D0009217EF /* HayContacts */,
+				FB002FE41A1A05D1009217EF /* HayContactsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB002FC71A1A05D0009217EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB002FDB1A1A05D0009217EF /* Main.storyboard in Resources */,
+				FB002FE01A1A05D1009217EF /* LaunchScreen.xib in Resources */,
+				FB002FDD1A1A05D1009217EF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB002FE31A1A05D1009217EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB002FC51A1A05D0009217EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB002FD21A1A05D0009217EF /* AppDelegate.m in Sources */,
+				FB002FD51A1A05D0009217EF /* MasterViewController.m in Sources */,
+				FB002FCF1A1A05D0009217EF /* main.m in Sources */,
+				FB002FD81A1A05D0009217EF /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB002FE11A1A05D1009217EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB002FEC1A1A05D1009217EF /* HayContactsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB002FE71A1A05D1009217EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB002FC81A1A05D0009217EF /* HayContacts */;
+			targetProxy = FB002FE61A1A05D1009217EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB002FD91A1A05D0009217EF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB002FDA1A1A05D0009217EF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB002FDE1A1A05D1009217EF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB002FDF1A1A05D1009217EF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB002FED1A1A05D1009217EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB002FEE1A1A05D1009217EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB002FF01A1A05D1009217EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HayContacts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FB002FF11A1A05D1009217EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HayContacts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FB002FF31A1A05D1009217EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HayContactsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HayContacts.app/HayContacts";
+			};
+			name = Debug;
+		};
+		FB002FF41A1A05D1009217EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HayContactsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HayContacts.app/HayContacts";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB002FC41A1A05D0009217EF /* Build configuration list for PBXProject "HayContacts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB002FED1A1A05D1009217EF /* Debug */,
+				FB002FEE1A1A05D1009217EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB002FEF1A1A05D1009217EF /* Build configuration list for PBXNativeTarget "HayContacts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB002FF01A1A05D1009217EF /* Debug */,
+				FB002FF11A1A05D1009217EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FB002FF21A1A05D1009217EF /* Build configuration list for PBXNativeTarget "HayContactsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB002FF31A1A05D1009217EF /* Debug */,
+				FB002FF41A1A05D1009217EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB002FC11A1A05D0009217EF /* Project object */;
+}
