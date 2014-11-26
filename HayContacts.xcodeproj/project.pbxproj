@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59E923D01A26375000A48580 /* contacto.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E923CF1A26375000A48580 /* contacto.png */; };
 		FB002FCF1A1A05D0009217EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB002FCE1A1A05D0009217EF /* main.m */; };
 		FB002FD21A1A05D0009217EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB002FD11A1A05D0009217EF /* AppDelegate.m */; };
 		FB002FD51A1A05D0009217EF /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB002FD41A1A05D0009217EF /* MasterViewController.m */; };
-		FB002FD81A1A05D0009217EF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB002FD71A1A05D0009217EF /* DetailViewController.m */; };
-		FB002FDB1A1A05D0009217EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB002FD91A1A05D0009217EF /* Main.storyboard */; };
 		FB002FDD1A1A05D1009217EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB002FDC1A1A05D1009217EF /* Images.xcassets */; };
 		FB002FE01A1A05D1009217EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB002FDE1A1A05D1009217EF /* LaunchScreen.xib */; };
 		FB002FEC1A1A05D1009217EF /* HayContactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB002FEB1A1A05D1009217EF /* HayContactsTests.m */; };
+		FB002FF71A1A060D009217EF /* Contacto.m in Sources */ = {isa = PBXBuildFile; fileRef = FB002FF61A1A060D009217EF /* Contacto.m */; };
+		FB002FFA1A1A099D009217EF /* ListaContactos.m in Sources */ = {isa = PBXBuildFile; fileRef = FB002FF91A1A099D009217EF /* ListaContactos.m */; };
+		FB0EA58C1A24774800089FE0 /* NuevoContacto.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0EA58B1A24774800089FE0 /* NuevoContacto.m */; };
+		FB0EA58F1A24825B00089FE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0EA58D1A24825B00089FE0 /* Main.storyboard */; };
+		FBF2AE631A1C86F200296263 /* nicolas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBF2AE621A1C86F200296263 /* nicolas.jpg */; };
+		FBF2AE6B1A1C963400296263 /* DetalleContacto.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF2AE6A1A1C963400296263 /* DetalleContacto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59E923CF1A26375000A48580 /* contacto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contacto.png; sourceTree = "<group>"; };
 		FB002FC91A1A05D0009217EF /* HayContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HayContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB002FCD1A1A05D0009217EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB002FCE1A1A05D0009217EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -35,14 +41,21 @@
 		FB002FD11A1A05D0009217EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FB002FD31A1A05D0009217EF /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		FB002FD41A1A05D0009217EF /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		FB002FD61A1A05D0009217EF /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		FB002FD71A1A05D0009217EF /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		FB002FDA1A1A05D0009217EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB002FDC1A1A05D1009217EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB002FDF1A1A05D1009217EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FB002FE51A1A05D1009217EF /* HayContactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HayContactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB002FEA1A1A05D1009217EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB002FEB1A1A05D1009217EF /* HayContactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HayContactsTests.m; sourceTree = "<group>"; };
+		FB002FF51A1A060D009217EF /* Contacto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contacto.h; sourceTree = "<group>"; };
+		FB002FF61A1A060D009217EF /* Contacto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contacto.m; sourceTree = "<group>"; };
+		FB002FF81A1A099D009217EF /* ListaContactos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaContactos.h; sourceTree = "<group>"; };
+		FB002FF91A1A099D009217EF /* ListaContactos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaContactos.m; sourceTree = "<group>"; };
+		FB0EA58A1A24774800089FE0 /* NuevoContacto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NuevoContacto.h; sourceTree = "<group>"; };
+		FB0EA58B1A24774800089FE0 /* NuevoContacto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NuevoContacto.m; sourceTree = "<group>"; };
+		FB0EA58E1A24825B00089FE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HayContacts/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FBF2AE621A1C86F200296263 /* nicolas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nicolas.jpg; sourceTree = "<group>"; };
+		FBF2AE691A1C963400296263 /* DetalleContacto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalleContacto.h; sourceTree = "<group>"; };
+		FBF2AE6A1A1C963400296263 /* DetalleContacto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalleContacto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +101,17 @@
 				FB002FD11A1A05D0009217EF /* AppDelegate.m */,
 				FB002FD31A1A05D0009217EF /* MasterViewController.h */,
 				FB002FD41A1A05D0009217EF /* MasterViewController.m */,
-				FB002FD61A1A05D0009217EF /* DetailViewController.h */,
-				FB002FD71A1A05D0009217EF /* DetailViewController.m */,
-				FB002FD91A1A05D0009217EF /* Main.storyboard */,
+				FBF2AE691A1C963400296263 /* DetalleContacto.h */,
+				FBF2AE6A1A1C963400296263 /* DetalleContacto.m */,
+				FB002FF51A1A060D009217EF /* Contacto.h */,
+				FB002FF61A1A060D009217EF /* Contacto.m */,
+				FB002FF81A1A099D009217EF /* ListaContactos.h */,
+				FB002FF91A1A099D009217EF /* ListaContactos.m */,
+				FB0EA58A1A24774800089FE0 /* NuevoContacto.h */,
+				FB0EA58B1A24774800089FE0 /* NuevoContacto.m */,
+				FB0EA58D1A24825B00089FE0 /* Main.storyboard */,
+				FBF2AE621A1C86F200296263 /* nicolas.jpg */,
+				59E923CF1A26375000A48580 /* contacto.png */,
 				FB002FDC1A1A05D1009217EF /* Images.xcassets */,
 				FB002FDE1A1A05D1009217EF /* LaunchScreen.xib */,
 				FB002FCC1A1A05D0009217EF /* Supporting Files */,
@@ -204,9 +225,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB002FDB1A1A05D0009217EF /* Main.storyboard in Resources */,
+				FBF2AE631A1C86F200296263 /* nicolas.jpg in Resources */,
 				FB002FE01A1A05D1009217EF /* LaunchScreen.xib in Resources */,
 				FB002FDD1A1A05D1009217EF /* Images.xcassets in Resources */,
+				FB0EA58F1A24825B00089FE0 /* Main.storyboard in Resources */,
+				59E923D01A26375000A48580 /* contacto.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,10 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB002FFA1A1A099D009217EF /* ListaContactos.m in Sources */,
+				FB0EA58C1A24774800089FE0 /* NuevoContacto.m in Sources */,
 				FB002FD21A1A05D0009217EF /* AppDelegate.m in Sources */,
 				FB002FD51A1A05D0009217EF /* MasterViewController.m in Sources */,
+				FBF2AE6B1A1C963400296263 /* DetalleContacto.m in Sources */,
+				FB002FF71A1A060D009217EF /* Contacto.m in Sources */,
 				FB002FCF1A1A05D0009217EF /* main.m in Sources */,
-				FB002FD81A1A05D0009217EF /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,20 +276,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FB002FD91A1A05D0009217EF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB002FDA1A1A05D0009217EF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FB002FDE1A1A05D1009217EF /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FB002FDF1A1A05D1009217EF /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		FB0EA58D1A24825B00089FE0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB0EA58E1A24825B00089FE0 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -418,6 +445,7 @@
 				FB002FF11A1A05D1009217EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB002FF21A1A05D1009217EF /* Build configuration list for PBXNativeTarget "HayContactsTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +454,7 @@
 				FB002FF41A1A05D1009217EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

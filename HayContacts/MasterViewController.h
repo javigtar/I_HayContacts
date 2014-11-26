@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class ListaContactos;
+
 @interface MasterViewController : UITableViewController
 
+@property (strong,nonatomic) ListaContactos *listaContactos;
+
+- (IBAction)volver:(UIStoryboardSegue *)segue;
+- (IBAction)hecho:(UIStoryboardSegue *)segue;
 
 @end
 
