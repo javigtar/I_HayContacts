@@ -20,6 +20,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *mail;
 @property (weak, nonatomic) IBOutlet UILabel *twitter;
 @property (weak, nonatomic) IBOutlet UILabel *facebook;
-@property (weak, nonatomic) IBOutlet UILabel *whatsapp;
+@property (weak, nonatomic) IBOutlet UISwitch *whatsapp;
 
 @end

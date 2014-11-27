@@ -34,6 +34,12 @@
     
     [self initGrupoPicker];
     
+    //UIImageView *twitter = (UIImageView*)[self.view viewWithTag:2];
+    //twitter.image = [UIImage imageNamed:@"twitter.png"];
+    //twitter.layer.cornerRadius = 30;
+    //twitter.clipsToBounds = YES;
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -60,16 +66,41 @@
 
 //Se ejecutará cuando apretemos sobre el botón Imagen Contacto y nos permitirá seleccionar una imagen de la galería
 - (IBAction)nuevaImagen:(UIButton *)sender{
-    //Inicia el controlador
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    //Define el Delegate
-    picker.delegate = self;
-    //Permite la edición de la foto
-    picker.allowsEditing = YES;
-    //Establece el origen de la imagen
-    picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-    //Agrega la vista del controlador a la pantalla
-    [self presentViewController:picker animated:YES completion:nil];
+    
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Añadir Foto" message:nil delegate:self cancelButtonTitle:@"Cancelar"
+                                          otherButtonTitles:@"Desde Cámara", @"Desde Galería",nil];
+    [alert show];
+    
+}
+
+//Se ejecutará cuando hayamos elegido una opción para añadir una foto al contacto
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    
+    //Botón de seleccionar desde cámara (NO FUNCIONA, SUPONGO QUE SERÁ PORQUE NO LLEVA CÁMARA EL EMULADOR)
+    if (buttonIndex == 1) {
+        //Inicia el controlador
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        //Define el delegado
+        picker.delegate = self;
+        //Establece la cámara como origen de la imagen
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        //Agrega la vista del controlador a la pantalla
+        [self presentViewController:picker animated:YES completion:nil];
+    }
+    //Botón de seleccionar desde galería
+    else if (buttonIndex == 2) {
+        //Inicia el controlador
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        //Define el Delegate
+        picker.delegate = self;
+        //Permite la edición de la foto
+        picker.allowsEditing = YES;
+        //Establece el origen de la imagen
+        picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        //Agrega la vista del controlador a la pantalla
+        [self presentViewController:picker animated:YES completion:nil];
+    }
 }
 
 //Se ejecutará cuando hayamos seleccionado la foto de la galería para ponerla en el contacto
@@ -129,8 +160,14 @@
             self.contacto.imagenContacto = self.imagenContacto;
             self.contacto.direccion = self.direccion.text;
             self.contacto.mail = self.mail.text;
-            self.contacto.twitter = [[NSString alloc] initWithFormat:@"@%@", self.twitter.text ];
-            self.contacto.facebook = [[NSString alloc] initWithFormat:@"https://www.facebook.com/%@", self.facebook];
+            //Comprueba que se hayan metido datos en el campo Twitter para añadirle @ delante del nombre de usuario
+            if ([self.twitter.text length]) {
+                self.contacto.twitter = [[NSString alloc] initWithFormat:@"@%@", self.twitter.text ];
+            }
+            //Comprueba que se hayan metido datos en el campo Facebook para añadirle la direccion web de la pagina
+            if ([self.facebook.text length]) {
+                self.contacto.facebook = [[NSString alloc] initWithFormat:@"https://www.facebook.com/%@", self.facebook.text];
+            }
             self.contacto.grupo = self.grupoSeleccionado;
         }
         

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5953CD2B1A279FA4008F474A /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 5953CD2A1A279FA4008F474A /* twitter.png */; };
+		5953CD2D1A27A307008F474A /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 5953CD2C1A27A307008F474A /* facebook.png */; };
+		5953CD2F1A27A373008F474A /* whatsapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 5953CD2E1A27A373008F474A /* whatsapp.png */; };
+		5953CD311A27A3EF008F474A /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 5953CD301A27A3EF008F474A /* mail.png */; };
 		59E923D01A26375000A48580 /* contacto.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E923CF1A26375000A48580 /* contacto.png */; };
 		FB002FCF1A1A05D0009217EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB002FCE1A1A05D0009217EF /* main.m */; };
 		FB002FD21A1A05D0009217EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB002FD11A1A05D0009217EF /* AppDelegate.m */; };
@@ -33,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5953CD2A1A279FA4008F474A /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		5953CD2C1A27A307008F474A /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		5953CD2E1A27A373008F474A /* whatsapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whatsapp.png; sourceTree = "<group>"; };
+		5953CD301A27A3EF008F474A /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
 		59E923CF1A26375000A48580 /* contacto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contacto.png; sourceTree = "<group>"; };
 		FB002FC91A1A05D0009217EF /* HayContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HayContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB002FCD1A1A05D0009217EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +84,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5953CD291A279F89008F474A /* imagenes */ = {
+			isa = PBXGroup;
+			children = (
+				5953CD301A27A3EF008F474A /* mail.png */,
+				5953CD2E1A27A373008F474A /* whatsapp.png */,
+				5953CD2C1A27A307008F474A /* facebook.png */,
+				5953CD2A1A279FA4008F474A /* twitter.png */,
+				FBF2AE621A1C86F200296263 /* nicolas.jpg */,
+				59E923CF1A26375000A48580 /* contacto.png */,
+			);
+			name = imagenes;
+			sourceTree = "<group>";
+		};
 		FB002FC01A1A05D0009217EF = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +118,7 @@
 		FB002FCB1A1A05D0009217EF /* HayContacts */ = {
 			isa = PBXGroup;
 			children = (
+				5953CD291A279F89008F474A /* imagenes */,
 				FB002FD01A1A05D0009217EF /* AppDelegate.h */,
 				FB002FD11A1A05D0009217EF /* AppDelegate.m */,
 				FB002FD31A1A05D0009217EF /* MasterViewController.h */,
@@ -110,8 +132,6 @@
 				FB0EA58A1A24774800089FE0 /* NuevoContacto.h */,
 				FB0EA58B1A24774800089FE0 /* NuevoContacto.m */,
 				FB0EA58D1A24825B00089FE0 /* Main.storyboard */,
-				FBF2AE621A1C86F200296263 /* nicolas.jpg */,
-				59E923CF1A26375000A48580 /* contacto.png */,
 				FB002FDC1A1A05D1009217EF /* Images.xcassets */,
 				FB002FDE1A1A05D1009217EF /* LaunchScreen.xib */,
 				FB002FCC1A1A05D0009217EF /* Supporting Files */,
@@ -227,9 +247,13 @@
 			files = (
 				FBF2AE631A1C86F200296263 /* nicolas.jpg in Resources */,
 				FB002FE01A1A05D1009217EF /* LaunchScreen.xib in Resources */,
+				5953CD311A27A3EF008F474A /* mail.png in Resources */,
 				FB002FDD1A1A05D1009217EF /* Images.xcassets in Resources */,
+				5953CD2D1A27A307008F474A /* facebook.png in Resources */,
+				5953CD2B1A279FA4008F474A /* twitter.png in Resources */,
 				FB0EA58F1A24825B00089FE0 /* Main.storyboard in Resources */,
 				59E923D01A26375000A48580 /* contacto.png in Resources */,
+				5953CD2F1A27A373008F474A /* whatsapp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
