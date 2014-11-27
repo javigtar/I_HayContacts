@@ -389,7 +389,7 @@
                     <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Mws-nc-LVq">
                             <connections>
-                                <segue destination="7Cy-JF-eBO" kind="show" id="GNd-yo-35a"/>
+                                <segue destination="7Cy-JF-eBO" kind="show" identifier="NuevoContacto" id="GNd-yo-35a"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -728,6 +728,6 @@
         <image name="whatsapp.png" width="240" height="238"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lBC-2u-vT9"/>
+        <segue reference="GNd-yo-35a"/>
     </inferredMetricsTieBreakers>
 </document>

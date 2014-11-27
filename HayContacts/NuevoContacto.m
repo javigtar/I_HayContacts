@@ -161,11 +161,16 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    //Compruebo que el segue se llame GuardarContacto
-    //if ([[segue identifier] isEqualToString:@"GuardarContacto"]) {
+    //Compruebo que el segue se llame GuardarContacto y guardo el contacto nuevo en la lista de contactos
+    if ([[segue identifier] isEqualToString:@"GuardarContacto"]) {
         
-        
-    //}
+        if (!self.editar) {
+            [self crearContacto];
+        }
+        else{
+            
+        }
+    }
 }
 
 -(void)crearContacto{
