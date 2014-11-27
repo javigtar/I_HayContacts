@@ -8,6 +8,7 @@
 
 #import "NuevoContacto.h"
 #import "Contacto.h"
+#import "ListaContactos.h"
 
 @interface NuevoContacto ()
 
@@ -23,7 +24,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //self.contacto = [[Contacto alloc] init];
+    [self initGrupoPicker];
+    
+    self.editar = false;
+    
+    if (self.contacto) {
+        self.imagenContacto = self.contacto.imagenContacto;
+        self.nombre.text = self.contacto.nombre;
+        self.apellidos.text = self.contacto.apellidos;
+        self.telefono.text = [self.contacto.telefono stringValue];
+        self.direccion.text = self.contacto.direccion;
+        self.mail.text = self.contacto.mail;
+        self.twitter.text = self.contacto.twitter;
+        self.facebook.text = self.contacto.facebook;
+        [self.whatsapp setOn:self.contacto.whatsapp];
+        [self.grupoPicker selectRow:[self filaGrupo:self.contacto.grupo] inComponent:0 animated:NO];
+        
+        self.editar = true;
+    }
     
     //Imagen por defecto de los contactos
     self.imagenContacto = [UIImage imageNamed:@"contacto.png"];
@@ -32,12 +50,6 @@
     self.nuevaImagen.layer.cornerRadius = 40;
     self.nuevaImagen.clipsToBounds = YES;
     
-    [self initGrupoPicker];
-    
-    //UIImageView *twitter = (UIImageView*)[self.view viewWithTag:2];
-    //twitter.image = [UIImage imageNamed:@"twitter.png"];
-    //twitter.layer.cornerRadius = 30;
-    //twitter.clipsToBounds = YES;
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -132,13 +144,13 @@
     
 }
 
-// The data to return for the row and component (column) that's being passed in
+// Datos que mostrará el Picker View
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     return self.datosPicker[row];
 }
 
-// Catpure the picker view selection
+// Devuelve la opcion selecionada del PickerView
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     // This method is triggered whenever the user makes a change to the picker selection.
@@ -150,28 +162,48 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     //Compruebo que el segue se llame GuardarContacto
-    if ([[segue identifier] isEqualToString:@"GuardarContacto"]) {
-        //Compruebo que los campos: nombre, apellidos y telefono contengan datos
-        if ([self.nombre.text length] && [self.apellidos.text length] && [self.telefono.text length]) {
-            NSNumber *telefono = [[NSNumber alloc] initWithInteger:[self.telefono.text integerValue]];
-            //Creo el objeto contacto con los datos de los 3 campos obligatorios
-            self.contacto = [[Contacto alloc] initWithParams:self.nombre.text apellidos:self.apellidos.text telefono:telefono];
-            //Añado las propiedades restantes
-            self.contacto.imagenContacto = self.imagenContacto;
-            self.contacto.direccion = self.direccion.text;
-            self.contacto.mail = self.mail.text;
-            //Comprueba que se hayan metido datos en el campo Twitter para añadirle @ delante del nombre de usuario
-            if ([self.twitter.text length]) {
-                self.contacto.twitter = [[NSString alloc] initWithFormat:@"@%@", self.twitter.text ];
-            }
-            //Comprueba que se hayan metido datos en el campo Facebook para añadirle la direccion web de la pagina
-            if ([self.facebook.text length]) {
-                self.contacto.facebook = [[NSString alloc] initWithFormat:@"https://www.facebook.com/%@", self.facebook.text];
-            }
-            self.contacto.grupo = self.grupoSeleccionado;
-        }
+    //if ([[segue identifier] isEqualToString:@"GuardarContacto"]) {
         
+        
+    //}
+}
+
+-(void)crearContacto{
+    
+    //Compruebo que los campos: nombre, apellidos y telefono contengan datos
+    if ([self.nombre.text length] && [self.apellidos.text length] && [self.telefono.text length]) {
+        NSNumber *telefono = [[NSNumber alloc] initWithInteger:[self.telefono.text integerValue]];
+        //Creo el objeto contacto con los datos de los 3 campos obligatorios
+        self.contacto = [[Contacto alloc] initWithParams:self.nombre.text apellidos:self.apellidos.text telefono:telefono];
+        //Añado las propiedades restantes
+        self.contacto.imagenContacto = self.imagenContacto;
+        self.contacto.direccion = self.direccion.text;
+        self.contacto.mail = self.mail.text;
+        //Comprueba que se hayan metido datos en el campo Twitter para añadirle @ delante del nombre de usuario
+        if ([self.twitter.text length]) {
+            self.contacto.twitter = [[NSString alloc] initWithFormat:@"@%@", self.twitter.text ];
+        }
+        //Comprueba que se hayan metido datos en el campo Facebook para añadirle la direccion web de la pagina
+        if ([self.facebook.text length]) {
+            self.contacto.facebook = [[NSString alloc] initWithFormat:@"https://www.facebook.com/%@", self.facebook.text];
+        }
+        self.contacto.grupo = self.grupoSeleccionado;
+        self.contacto.whatsapp = [self.whatsapp isOn];
     }
+    
+    [self.listaContactos addContacto:self.contacto];
+}
+
+//Devuelve el indice del Array de grupos donde se encuentre el grupo que le pasamos por parámetro
+-(NSInteger)filaGrupo:(NSString*)grupo{
+    
+    for (int i=0 ; i < self.datosPicker.count ; i++) {
+        NSString *nombreGrupo = [[NSString alloc] initWithString:self.datosPicker[i]];
+        if ([grupo isEqualToString:nombreGrupo]) {
+            return i;
+        }
+    }
+    return 0;
 }
 
 

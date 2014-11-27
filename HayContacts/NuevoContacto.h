@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class ListaContactos;
 @class Contacto;
 
 @interface NuevoContacto : UITableViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate, UIPickerViewDataSource,UIPickerViewDelegate>
 
 @property(nonatomic,strong)Contacto *contacto;
+@property (strong,nonatomic) ListaContactos *listaContactos;
+
 @property (nonatomic, strong)NSArray *datosPicker;
 @property (weak, nonatomic) IBOutlet UITextField *nombre;
 @property (weak, nonatomic) IBOutlet UITextField *apellidos;
@@ -22,7 +25,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *twitter;
 @property (weak, nonatomic) IBOutlet UITextField *facebook;
 @property (weak, nonatomic) IBOutlet UIPickerView *grupo;
+@property (weak, nonatomic) IBOutlet UISwitch *whatsapp;
 
+@property (nonatomic) BOOL editar;
 
 - (IBAction)nuevaImagen:(UIButton *)sender;
 

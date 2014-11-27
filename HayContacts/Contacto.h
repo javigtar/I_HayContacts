@@ -20,7 +20,7 @@
 @property (nonatomic) NSString *mail;
 @property (nonatomic) NSString *twitter;
 @property (nonatomic) NSString *facebook;
-@property (nonatomic) BOOL *whatsapp;
+@property (nonatomic) BOOL whatsapp;
 
 -(id)initWithParams:(NSString*)nombre apellidos:(NSString*)apellidos telefono:(NSNumber*)telefono;
 

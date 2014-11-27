@@ -90,6 +90,9 @@
     foto.layer.cornerRadius = 16;
     foto.clipsToBounds = YES;
     
+    UILabel *nombre = (UILabel*)[self.view viewWithTag:2];
+    nombre.text = contacto.nombre;
+    
     
     
      
@@ -122,10 +125,17 @@
     
     //Comprueba que el segue se llame GuardarContacto
     if ([[segue identifier] isEqualToString:@"GuardarContacto"]) {
+        
         //Creo un puntero que hará referencia al ViewController asociado al segue
         NuevoContacto *nuevoContacto = [segue sourceViewController];
+        //Compruebo si me va a devolver un contacto nuevo o uno editado
+        if (nuevoContacto.editar) {
+            
+            }        
+        else{
         //Añado el contacto que me devuelve el ViewController a mi lista de contactos
         [self.listaContactos addContacto:nuevoContacto.contacto];
+        }
         //Recargo datos de la tabla
         [[self tableView] reloadData];
         

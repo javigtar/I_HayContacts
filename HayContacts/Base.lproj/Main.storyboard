@@ -247,11 +247,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pfj-NR-vhg" id="fVp-eD-3zj">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wwx-k0-0RP">
-                                                    <rect key="frame" x="113" y="7" width="470" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yq3-r9-4Fj">
                                                     <rect key="frame" x="37" y="5" width="32" height="32"/>
                                                     <constraints>
@@ -259,13 +254,15 @@
                                                         <constraint firstAttribute="height" constant="32" id="RWP-pz-9od"/>
                                                     </constraints>
                                                 </imageView>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eH3-gX-SwM">
+                                                    <rect key="frame" x="151" y="6" width="51" height="31"/>
+                                                </switch>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="eH3-gX-SwM" firstAttribute="top" secondItem="fVp-eD-3zj" secondAttribute="topMargin" constant="-2" id="1Ml-kQ-DDQ"/>
                                                 <constraint firstItem="Yq3-r9-4Fj" firstAttribute="leading" secondItem="fVp-eD-3zj" secondAttribute="leadingMargin" constant="29" id="5GJ-Jz-d7p"/>
-                                                <constraint firstItem="wwx-k0-0RP" firstAttribute="top" secondItem="fVp-eD-3zj" secondAttribute="topMargin" constant="-1" id="9GS-dp-Vhg"/>
                                                 <constraint firstAttribute="centerY" secondItem="Yq3-r9-4Fj" secondAttribute="centerY" constant="0.5" id="IRZ-m6-Sw1"/>
-                                                <constraint firstItem="wwx-k0-0RP" firstAttribute="leading" secondItem="Yq3-r9-4Fj" secondAttribute="trailing" constant="44" id="aH9-Xt-NZO"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="wwx-k0-0RP" secondAttribute="trailing" constant="9" id="hSP-Dk-oKK"/>
+                                                <constraint firstItem="eH3-gX-SwM" firstAttribute="leading" secondItem="Yq3-r9-4Fj" secondAttribute="trailing" constant="82" id="oS5-YL-0Ll"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -328,6 +325,7 @@
                         <outlet property="nuevaImagen" destination="mrg-Ah-zyt" id="dXI-Ex-q5P"/>
                         <outlet property="telefono" destination="LiK-UB-nC6" id="Oid-GU-4Gw"/>
                         <outlet property="twitter" destination="AEn-fb-zGt" id="d4d-Qg-d5C"/>
+                        <outlet property="whatsapp" destination="eH3-gX-SwM" id="3kb-FG-Y4v"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5PX-7G-BPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -359,10 +357,10 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RU2-Ch-TV3">
-                                            <rect key="frame" x="81" y="14" width="42" height="21"/>
+                                            <rect key="frame" x="81" y="15" width="460" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="EgH-6n-b4q"/>
-                                                <constraint firstAttribute="width" constant="42" id="hpc-AD-i6A"/>
+                                                <constraint firstAttribute="width" constant="460" id="hpc-AD-i6A"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -371,9 +369,9 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="tY1-Nk-GSV" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" constant="15" id="FQk-FU-rRX"/>
-                                        <constraint firstItem="RU2-Ch-TV3" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="topMargin" constant="6" id="Lr0-Vp-ibs"/>
-                                        <constraint firstItem="RU2-Ch-TV3" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" constant="73" id="aE2-MK-F7p"/>
+                                        <constraint firstItem="RU2-Ch-TV3" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="topMargin" constant="7" id="Lr0-Vp-ibs"/>
                                         <constraint firstAttribute="centerY" secondItem="tY1-Nk-GSV" secondAttribute="centerY" constant="0.5" id="jed-Dm-eNv"/>
+                                        <constraint firstItem="RU2-Ch-TV3" firstAttribute="leading" secondItem="tY1-Nk-GSV" secondAttribute="trailing" constant="26" id="tUi-0V-25b"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -398,7 +396,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605" y="50"/>
+            <point key="canvasLocation" x="605" y="49"/>
         </scene>
         <!--Detalle Contacto-->
         <scene sceneID="NM7-pp-Aai">
@@ -665,7 +663,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nEV-vs-w2O" id="xAq-7b-TdJ">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SdB-z6-hGJ">
+                                                <switch opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SdB-z6-hGJ">
                                                     <rect key="frame" x="151" y="6" width="51" height="31"/>
                                                 </switch>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp.png" translatesAutoresizingMaskIntoConstraints="NO" id="q7m-xg-Jlf">
@@ -693,12 +691,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="2Nn-Zn-MER">
-                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="vh9-xY-hRQ">
+                        <barButtonItem key="leftBarButtonItem" title="Volver" id="vh9-xY-hRQ">
                             <connections>
                                 <segue destination="STN-3c-i7c" kind="unwind" unwindAction="volver:" id="UCa-0X-g2X"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Editar" id="IsD-It-mRo"/>
+                        <barButtonItem key="rightBarButtonItem" title="Editar" id="IsD-It-mRo">
+                            <connections>
+                                <segue destination="7Cy-JF-eBO" kind="show" identifier="EditarContacto" id="lBC-2u-vT9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="direccion" destination="Gmv-7m-AEs" id="3xp-Lh-xUA"/>
@@ -725,4 +727,7 @@
         <image name="twitter.png" width="256" height="256"/>
         <image name="whatsapp.png" width="240" height="238"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="lBC-2u-vT9"/>
+    </inferredMetricsTieBreakers>
 </document>

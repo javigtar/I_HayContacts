@@ -8,6 +8,7 @@
 
 #import "DetalleContacto.h"
 #import "Contacto.h"
+#import "NuevoContacto.h"
 
 @interface DetalleContacto ()
 
@@ -55,6 +56,7 @@
         self.mail.text = self.contacto.mail;
         self.twitter.text = self.contacto.twitter;
         self.facebook.text = self.contacto.facebook;
+        [self.whatsapp setOn:self.contacto.whatsapp];
         //self.whatsapp.text = self.contacto.whatsapp;
         //Imagen del contacto redondeada
         self.imagen.layer.cornerRadius = 40;
@@ -73,6 +75,16 @@
     // Return the number of rows in the section.
     return 8;
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    //Compruebo que el segue se llame EditarContacto
+    if ([[segue identifier] isEqualToString:@"EditarContacto"]) {
+        NuevoContacto *editarContacto = [segue destinationViewController];
+        editarContacto.contacto = self.contacto;
+    }
+}
+
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
