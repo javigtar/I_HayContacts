@@ -459,64 +459,27 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6A-Ik-myi">
                                                     <rect key="frame" x="55" y="37" width="256" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="Hqp-jA-iyG"/>
-                                                        <constraint firstAttribute="width" constant="183" id="X3d-va-ERe"/>
-                                                        <constraint firstAttribute="width" constant="256" id="m7n-wn-dFa"/>
+                                                        <constraint firstAttribute="width" constant="256" id="FPL-nn-2YJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="X3d-va-ERe"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                        <mask key="constraints">
-                                                            <include reference="X3d-va-ERe"/>
-                                                        </mask>
-                                                    </variation>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4mE-v7-WEs">
                                                     <rect key="frame" x="501" y="8" width="80" height="80"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="NoE-bb-JwK"/>
-                                                        <constraint firstAttribute="width" constant="80" id="Vae-oy-06h"/>
-                                                        <constraint firstAttribute="width" constant="80" id="szk-JT-kbJ"/>
+                                                        <constraint firstAttribute="height" constant="80" id="Gv6-1P-IDF"/>
+                                                        <constraint firstAttribute="width" constant="80" id="fIM-zZ-owL"/>
                                                     </constraints>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="szk-JT-kbJ"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                        <mask key="constraints">
-                                                            <include reference="szk-JT-kbJ"/>
-                                                        </mask>
-                                                    </variation>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="4mE-v7-WEs" firstAttribute="leading" secondItem="f6A-Ik-myi" secondAttribute="trailing" constant="56" id="2x7-8O-G7A"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="4mE-v7-WEs" secondAttribute="trailing" constant="11" id="B1M-Sk-5Xj"/>
-                                                <constraint firstItem="f6A-Ik-myi" firstAttribute="leading" secondItem="S7N-LJ-1zy" secondAttribute="leadingMargin" constant="16" id="JED-uU-AHJ"/>
-                                                <constraint firstItem="f6A-Ik-myi" firstAttribute="leading" secondItem="S7N-LJ-1zy" secondAttribute="leadingMargin" constant="47" id="TRB-wx-FUQ"/>
-                                                <constraint firstItem="4mE-v7-WEs" firstAttribute="top" secondItem="S7N-LJ-1zy" secondAttribute="topMargin" id="WQd-Ad-p2N"/>
-                                                <constraint firstItem="4mE-v7-WEs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="f6A-Ik-myi" secondAttribute="trailing" constant="190" id="vaD-hS-zyQ"/>
-                                                <constraint firstItem="f6A-Ik-myi" firstAttribute="top" secondItem="S7N-LJ-1zy" secondAttribute="topMargin" constant="29" id="w6G-v6-ae6"/>
+                                                <constraint firstItem="f6A-Ik-myi" firstAttribute="leading" secondItem="S7N-LJ-1zy" secondAttribute="leadingMargin" constant="47" id="1S4-nY-rTk"/>
+                                                <constraint firstItem="f6A-Ik-myi" firstAttribute="centerY" secondItem="4mE-v7-WEs" secondAttribute="centerY" constant="-0.5" id="Fwc-yd-K7e"/>
+                                                <constraint firstItem="4mE-v7-WEs" firstAttribute="leading" relation="lessThanOrEqual" secondItem="f6A-Ik-myi" secondAttribute="trailing" constant="190" id="Sng-m3-6x6"/>
+                                                <constraint firstAttribute="centerY" secondItem="f6A-Ik-myi" secondAttribute="centerY" id="pbb-7a-aCB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="4mE-v7-WEs" secondAttribute="trailing" constant="11" id="yz1-hF-KI8"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="JED-uU-AHJ"/>
-                                                    <exclude reference="2x7-8O-G7A"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="JED-uU-AHJ"/>
-                                                    <include reference="2x7-8O-G7A"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="hvf-v7-kFE" kind="show" identifier="FotoContacto" id="b0T-nw-VfO"/>
