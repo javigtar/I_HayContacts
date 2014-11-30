@@ -9,6 +9,7 @@
 #import "DetalleContacto.h"
 #import "Contacto.h"
 #import "NuevoContacto.h"
+#import "FotoContacto.h"
 
 @interface DetalleContacto ()
 
@@ -20,7 +21,6 @@
     if(_contacto != nuevoContacto){
         _contacto = nuevoContacto;
         
-        //Update the view.
         [self mostrarDetalle];
     }
 }
@@ -28,20 +28,17 @@
 
 - (void)viewDidLoad {
    [super viewDidLoad];
+    
     [self mostrarDetalle];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+    }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+//Rellena los campos con el detalle del contacto
 -(void)mostrarDetalle{
     
     Contacto *contacto = self.contacto;
@@ -57,7 +54,6 @@
         self.twitter.text = self.contacto.twitter;
         self.facebook.text = self.contacto.facebook;
         [self.whatsapp setOn:self.contacto.whatsapp];
-        //self.whatsapp.text = self.contacto.whatsapp;
         //Imagen del contacto redondeada
         self.imagen.layer.cornerRadius = 40;
         self.imagen.clipsToBounds = YES;
@@ -76,68 +72,19 @@
     return 8;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {    
     
-    //Compruebo que el segue se llame EditarContacto
-    if ([[segue identifier] isEqualToString:@"EditarContacto"]) {
-        NuevoContacto *editarContacto = [segue destinationViewController];
-        editarContacto.contacto = self.contacto;
+    //Muestra la escena FotoContacto pasandole el nombre de la foto del contacto
+    if ([[segue identifier] isEqualToString:@"FotoContacto"]) {
+        
+        FotoContacto *mostrarFoto = [segue destinationViewController];
+        
+        mostrarFoto.nombreFoto = self.contacto.nombre;
     }
 }
 
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (IBAction)volver:(UIStoryboardSegue *)segue{
     
-    // Configure the cell...
-    
-    return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

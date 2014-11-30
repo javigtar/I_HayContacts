@@ -15,7 +15,7 @@
 @property (strong,nonatomic) ListaContactos *listaContactos;
 
 - (IBAction)volver:(UIStoryboardSegue *)segue;
-- (IBAction)hecho:(UIStoryboardSegue *)segue;
+- (IBAction)guardar:(UIStoryboardSegue *)segue;
 
 @end
 

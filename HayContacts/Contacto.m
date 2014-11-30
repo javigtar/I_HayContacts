@@ -10,7 +10,7 @@
 
 @implementation Contacto
 
--(id)initWithParams:(NSString*)nombre apellidos:(NSString*)apellidos telefono:(NSNumber*)telefono{
+-(id)initWithNombre:(NSString*)nombre apellidos:(NSString*)apellidos telefono:(NSNumber*)telefono{
     self = [super init];
     _nombre = nombre;
     _apellidos = apellidos;

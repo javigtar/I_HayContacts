@@ -22,6 +22,6 @@
 @property (nonatomic) NSString *facebook;
 @property (nonatomic) BOOL whatsapp;
 
--(id)initWithParams:(NSString*)nombre apellidos:(NSString*)apellidos telefono:(NSNumber*)telefono;
+-(id)initWithNombre:(NSString*)nombre apellidos:(NSString*)apellidos telefono:(NSNumber*)telefono;
 
 @end

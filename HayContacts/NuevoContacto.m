@@ -24,24 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //Inicia Los valores del UIPickerView
     [self initGrupoPicker];
-    
-    self.editar = false;
-    
-    if (self.contacto) {
-        self.imagenContacto = self.contacto.imagenContacto;
-        self.nombre.text = self.contacto.nombre;
-        self.apellidos.text = self.contacto.apellidos;
-        self.telefono.text = [self.contacto.telefono stringValue];
-        self.direccion.text = self.contacto.direccion;
-        self.mail.text = self.contacto.mail;
-        self.twitter.text = self.contacto.twitter;
-        self.facebook.text = self.contacto.facebook;
-        [self.whatsapp setOn:self.contacto.whatsapp];
-        [self.grupoPicker selectRow:[self filaGrupo:self.contacto.grupo] inComponent:0 animated:NO];
-        
-        self.editar = true;
-    }
     
     //Imagen por defecto de los contactos
     self.imagenContacto = [UIImage imageNamed:@"contacto.png"];
@@ -49,14 +33,6 @@
     //Poner los bordes redondeados a la imagen de contacto
     self.nuevaImagen.layer.cornerRadius = 40;
     self.nuevaImagen.clipsToBounds = YES;
-    
-    
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,7 +52,8 @@
     return 8;
 }
 
-//Se ejecutará cuando apretemos sobre el botón Imagen Contacto y nos permitirá seleccionar una imagen de la galería
+//Se ejecutará cuando apretemos sobre el botón imagenContacto. Mostrará una alerta y nos permitirá seleccionar
+//la opcion de elegir una imagen de la galería o hacerla con la cámara
 - (IBAction)nuevaImagen:(UIButton *)sender{
     
     
@@ -86,7 +63,7 @@
     
 }
 
-//Se ejecutará cuando hayamos elegido una opción para añadir una foto al contacto
+//Se ejecutará cuando hayamos elegido una opción para añadir una foto al contacto según lo que hayamos decidido
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     
     //Botón de seleccionar desde cámara (NO FUNCIONA, SUPONGO QUE SERÁ PORQUE NO LLEVA CÁMARA EL EMULADOR)
@@ -122,7 +99,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     //Establece la imagen tomada en un objeto UIImageView
     self.imagenContacto = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    //Poner la imagen como fondo del botón
+    //Pone la imagen como fondo del botón
     [self.nuevaImagen setBackgroundImage:self.imagenContacto forState:UIControlStateNormal];
 }
 
@@ -131,10 +108,12 @@
     return 1;
 }
 
+//Devuelve el número de filas del PickerView
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     return self.datosPicker.count;
 }
 
+//Inicia Los valores del UIPickerView
 - (void)initGrupoPicker{
     //Creo una array con los datos que contendrá el Picker View
     self.datosPicker = @[@"Favoritos", @"Familia", @"Amigos", @"Trabajo", @"Clase", @"Otros"];
@@ -159,27 +138,52 @@
     
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//Comprueba si los campos obligatorios estan rellenos, si lo estan devuelve YES y se ejecutara prepareForSegue, si devuelve NO, mostrara un alert
+//informando que faltan campos por rellenar y no se ejecutaá el segue
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{    
     
-    //Compruebo que el segue se llame GuardarContacto y guardo el contacto nuevo en la lista de contactos
-    if ([[segue identifier] isEqualToString:@"GuardarContacto"]) {
+   
+    if ([[sender title]isEqualToString:@"Grabar"]) {
+    
+        //Compruebo que el segue se llame GuardarContacto y que los campos obligatorios esten rellenos
+        if ([identifier isEqualToString:@"GuardarContacto"] && [self comprobarCamposObligatorios]) {
         
-        if (!self.editar) {
             [self crearContacto];
+        
+            return YES;
         }
-        else{
-            
-        }
+    
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Faltan campos obligatorios por rellenar"
+                                                       delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil, nil];
+        [alert show];
+    
+        return NO;
     }
+    
+    return  YES;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+}
+
+//Comprueba que los campos: nombre, apellidos y telefono contengan datos
+-(BOOL)comprobarCamposObligatorios{
+    
+    if ([self.nombre.text length] && [self.apellidos.text length] && [self.telefono.text length]){
+        return YES;
+    }
+    
+    return NO;
+    
+}
+
+//Crea un contacto y lo añade a la lista de contactos
 -(void)crearContacto{
     
-    //Compruebo que los campos: nombre, apellidos y telefono contengan datos
-    if ([self.nombre.text length] && [self.apellidos.text length] && [self.telefono.text length]) {
         NSNumber *telefono = [[NSNumber alloc] initWithInteger:[self.telefono.text integerValue]];
         //Creo el objeto contacto con los datos de los 3 campos obligatorios
-        self.contacto = [[Contacto alloc] initWithParams:self.nombre.text apellidos:self.apellidos.text telefono:telefono];
+        self.contacto = [[Contacto alloc] initWithNombre:self.nombre.text apellidos:self.apellidos.text telefono:telefono];
         //Añado las propiedades restantes
         self.contacto.imagenContacto = self.imagenContacto;
         self.contacto.direccion = self.direccion.text;
@@ -194,77 +198,9 @@
         }
         self.contacto.grupo = self.grupoSeleccionado;
         self.contacto.whatsapp = [self.whatsapp isOn];
-    }
+        
+        [self.listaContactos addContacto:self.contacto];
     
-    [self.listaContactos addContacto:self.contacto];
 }
-
-//Devuelve el indice del Array de grupos donde se encuentre el grupo que le pasamos por parámetro
--(NSInteger)filaGrupo:(NSString*)grupo{
-    
-    for (int i=0 ; i < self.datosPicker.count ; i++) {
-        NSString *nombreGrupo = [[NSString alloc] initWithString:self.datosPicker[i]];
-        if ([grupo isEqualToString:nombreGrupo]) {
-            return i;
-        }
-    }
-    return 0;
-}
-
-
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		594893E11A2B2CCF00051410 /* FotoContacto.m in Sources */ = {isa = PBXBuildFile; fileRef = 594893E01A2B2CCF00051410 /* FotoContacto.m */; };
+		594893E31A2B4B4900051410 /* Isabel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 594893E21A2B4B4900051410 /* Isabel.jpg */; };
 		5953CD2B1A279FA4008F474A /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 5953CD2A1A279FA4008F474A /* twitter.png */; };
 		5953CD2D1A27A307008F474A /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 5953CD2C1A27A307008F474A /* facebook.png */; };
 		5953CD2F1A27A373008F474A /* whatsapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 5953CD2E1A27A373008F474A /* whatsapp.png */; };
@@ -22,7 +24,7 @@
 		FB002FFA1A1A099D009217EF /* ListaContactos.m in Sources */ = {isa = PBXBuildFile; fileRef = FB002FF91A1A099D009217EF /* ListaContactos.m */; };
 		FB0EA58C1A24774800089FE0 /* NuevoContacto.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0EA58B1A24774800089FE0 /* NuevoContacto.m */; };
 		FB0EA58F1A24825B00089FE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0EA58D1A24825B00089FE0 /* Main.storyboard */; };
-		FBF2AE631A1C86F200296263 /* nicolas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBF2AE621A1C86F200296263 /* nicolas.jpg */; };
+		FBF2AE631A1C86F200296263 /* Nicolas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBF2AE621A1C86F200296263 /* Nicolas.jpg */; };
 		FBF2AE6B1A1C963400296263 /* DetalleContacto.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF2AE6A1A1C963400296263 /* DetalleContacto.m */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		594893DF1A2B2CCF00051410 /* FotoContacto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FotoContacto.h; sourceTree = "<group>"; };
+		594893E01A2B2CCF00051410 /* FotoContacto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FotoContacto.m; sourceTree = "<group>"; };
+		594893E21A2B4B4900051410 /* Isabel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Isabel.jpg; sourceTree = "<group>"; };
 		5953CD2A1A279FA4008F474A /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		5953CD2C1A27A307008F474A /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		5953CD2E1A27A373008F474A /* whatsapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whatsapp.png; sourceTree = "<group>"; };
@@ -61,7 +66,7 @@
 		FB0EA58A1A24774800089FE0 /* NuevoContacto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NuevoContacto.h; sourceTree = "<group>"; };
 		FB0EA58B1A24774800089FE0 /* NuevoContacto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NuevoContacto.m; sourceTree = "<group>"; };
 		FB0EA58E1A24825B00089FE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HayContacts/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FBF2AE621A1C86F200296263 /* nicolas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nicolas.jpg; sourceTree = "<group>"; };
+		FBF2AE621A1C86F200296263 /* Nicolas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Nicolas.jpg; sourceTree = "<group>"; };
 		FBF2AE691A1C963400296263 /* DetalleContacto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalleContacto.h; sourceTree = "<group>"; };
 		FBF2AE6A1A1C963400296263 /* DetalleContacto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalleContacto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,11 +92,12 @@
 		5953CD291A279F89008F474A /* imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				594893E21A2B4B4900051410 /* Isabel.jpg */,
 				5953CD301A27A3EF008F474A /* mail.png */,
 				5953CD2E1A27A373008F474A /* whatsapp.png */,
 				5953CD2C1A27A307008F474A /* facebook.png */,
 				5953CD2A1A279FA4008F474A /* twitter.png */,
-				FBF2AE621A1C86F200296263 /* nicolas.jpg */,
+				FBF2AE621A1C86F200296263 /* Nicolas.jpg */,
 				59E923CF1A26375000A48580 /* contacto.png */,
 			);
 			name = imagenes;
@@ -131,6 +137,8 @@
 				FB002FF91A1A099D009217EF /* ListaContactos.m */,
 				FB0EA58A1A24774800089FE0 /* NuevoContacto.h */,
 				FB0EA58B1A24774800089FE0 /* NuevoContacto.m */,
+				594893DF1A2B2CCF00051410 /* FotoContacto.h */,
+				594893E01A2B2CCF00051410 /* FotoContacto.m */,
 				FB0EA58D1A24825B00089FE0 /* Main.storyboard */,
 				FB002FDC1A1A05D1009217EF /* Images.xcassets */,
 				FB002FDE1A1A05D1009217EF /* LaunchScreen.xib */,
@@ -245,13 +253,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBF2AE631A1C86F200296263 /* nicolas.jpg in Resources */,
+				FBF2AE631A1C86F200296263 /* Nicolas.jpg in Resources */,
 				FB002FE01A1A05D1009217EF /* LaunchScreen.xib in Resources */,
 				5953CD311A27A3EF008F474A /* mail.png in Resources */,
 				FB002FDD1A1A05D1009217EF /* Images.xcassets in Resources */,
 				5953CD2D1A27A307008F474A /* facebook.png in Resources */,
 				5953CD2B1A279FA4008F474A /* twitter.png in Resources */,
 				FB0EA58F1A24825B00089FE0 /* Main.storyboard in Resources */,
+				594893E31A2B4B4900051410 /* Isabel.jpg in Resources */,
 				59E923D01A26375000A48580 /* contacto.png in Resources */,
 				5953CD2F1A27A373008F474A /* whatsapp.png in Resources */,
 			);
@@ -275,6 +284,7 @@
 				FB0EA58C1A24774800089FE0 /* NuevoContacto.m in Sources */,
 				FB002FD21A1A05D0009217EF /* AppDelegate.m in Sources */,
 				FB002FD51A1A05D0009217EF /* MasterViewController.m in Sources */,
+				594893E11A2B2CCF00051410 /* FotoContacto.m in Sources */,
 				FBF2AE6B1A1C963400296263 /* DetalleContacto.m in Sources */,
 				FB002FF71A1A060D009217EF /* Contacto.m in Sources */,
 				FB002FCF1A1A05D0009217EF /* main.m in Sources */,

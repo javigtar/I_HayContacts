@@ -27,25 +27,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];    
-    // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    //UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    //self.navigationItem.rightBarButtonItem = addButton;
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
-    }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 #pragma mark - Segues
@@ -73,32 +60,22 @@
     return [self.listaContactos numeroDeContactos];
 }
 
+//Muestra en cada fila el nombre de un contacto y su imagen
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     Contacto *contacto = [self.listaContactos contactoSegunIndice:indexPath.row];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Contacto" forIndexPath:indexPath];
     
-    //[cell.textLabel setText:contacto.nombre];
-    
-    //cell.imageView.image = contacto.imagenContacto;
-   
-    //[cell.imageView setAutoresizingMask:UIViewAutoresizingNone];
-     
-    //cell.imageView.layer.cornerRadius = 20;
-    //cell.imageView.clipsToBounds = YES;
-    
-    
+    //Asigna a foto el UIImageView de la vista con la etiqueta 1
     UIImageView *foto = (UIImageView*)[self.view viewWithTag:1];
     foto.image = contacto.imagenContacto;
     foto.layer.cornerRadius = 16;
     foto.clipsToBounds = YES;
     
+    //Asigna a nombre el UILabel de la vista con la etiqueta 2
     UILabel *nombre = (UILabel*)[self.view viewWithTag:2];
     nombre.text = contacto.nombre;
-    
-    
-    
      
     return cell;
 }
@@ -106,15 +83,6 @@
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return NO;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
 }
 
 - (IBAction)volver:(UIStoryboardSegue *)segue{
@@ -125,7 +93,7 @@
     
 }
 
-- (IBAction)hecho:(UIStoryboardSegue *)segue{
+- (IBAction)guardar:(UIStoryboardSegue *)segue{
     
     //Comprueba que el segue se llame GuardarContacto
     if ([[segue identifier] isEqualToString:@"GuardarContacto"]) {

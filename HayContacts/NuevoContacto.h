@@ -11,7 +11,7 @@
 @class ListaContactos;
 @class Contacto;
 
-@interface NuevoContacto : UITableViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate, UIPickerViewDataSource,UIPickerViewDelegate>
+@interface NuevoContacto : UITableViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 
 @property(nonatomic,strong)Contacto *contacto;
 @property (strong,nonatomic) ListaContactos *listaContactos;
@@ -26,8 +26,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *facebook;
 @property (weak, nonatomic) IBOutlet UIPickerView *grupo;
 @property (weak, nonatomic) IBOutlet UISwitch *whatsapp;
-
-@property (nonatomic) BOOL editar;
 
 - (IBAction)nuevaImagen:(UIButton *)sender;
 
