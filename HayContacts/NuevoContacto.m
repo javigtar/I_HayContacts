@@ -115,6 +115,7 @@
 
 //Inicia Los valores del UIPickerView
 - (void)initGrupoPicker{
+    
     //Creo una array con los datos que contendrá el Picker View
     self.datosPicker = @[@"Favoritos", @"Familia", @"Amigos", @"Trabajo", @"Clase", @"Otros"];
     //Decimos al Picker View que los datos los cogerá de este View Controller y que tambien será su delegado

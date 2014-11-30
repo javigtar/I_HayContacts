@@ -108,7 +108,7 @@
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="999" constant="180" id="OCC-TD-5vB"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7r-NL-fgk">
                                                     <rect key="frame" x="24" y="12" width="65" height="21"/>
@@ -169,7 +169,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOx-PW-6Gl">
                                                     <rect key="frame" x="113" y="7" width="470" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                 </textField>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail.png" translatesAutoresizingMaskIntoConstraints="NO" id="1k4-Md-dYG">
                                                     <rect key="frame" x="37" y="5" width="32" height="32"/>
@@ -573,7 +573,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="dBt-ub-2Fp" secondAttribute="trailing" constant="131" id="8dN-ga-y4F"/>
+                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="dBt-ub-2Fp" secondAttribute="trailing" constant="131" id="8dN-ga-y4F"/>
                                                 <constraint firstItem="dBt-ub-2Fp" firstAttribute="top" secondItem="Avp-bt-T8b" secondAttribute="topMargin" constant="3" id="OYM-Pq-2GD"/>
                                                 <constraint firstItem="Cxb-A1-rOG" firstAttribute="leading" secondItem="Avp-bt-T8b" secondAttribute="leadingMargin" constant="17" id="a06-XR-9Dk"/>
                                                 <constraint firstItem="dBt-ub-2Fp" firstAttribute="leading" secondItem="Cxb-A1-rOG" secondAttribute="trailing" constant="16" id="j2o-8h-uIL"/>
@@ -601,7 +601,7 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="0rQ-Wi-SzB" secondAttribute="trailing" constant="18" id="7lL-Mj-utQ"/>
+                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="0rQ-Wi-SzB" secondAttribute="trailing" constant="18" id="7lL-Mj-utQ"/>
                                                 <constraint firstAttribute="centerY" secondItem="Xkr-Gh-pK9" secondAttribute="centerY" constant="0.5" id="HmW-H0-2yJ"/>
                                                 <constraint firstItem="0rQ-Wi-SzB" firstAttribute="leading" secondItem="Xkr-Gh-pK9" secondAttribute="trailing" constant="60" id="M3e-Jx-aNk"/>
                                                 <constraint firstItem="Xkr-Gh-pK9" firstAttribute="leading" secondItem="a9j-Ik-Z9J" secondAttribute="leadingMargin" constant="29" id="MfL-w6-Khz"/>
@@ -632,7 +632,7 @@
                                                 <constraint firstAttribute="centerY" secondItem="dnX-T1-Ktc" secondAttribute="centerY" constant="0.5" id="7Vg-Ij-TwX"/>
                                                 <constraint firstItem="7Eg-Md-w3v" firstAttribute="leading" secondItem="dnX-T1-Ktc" secondAttribute="trailing" constant="60" id="Le1-Bh-dfB"/>
                                                 <constraint firstItem="dnX-T1-Ktc" firstAttribute="leading" secondItem="Jug-4k-H8P" secondAttribute="leadingMargin" constant="29" id="NUZ-pv-Szx"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="7Eg-Md-w3v" secondAttribute="trailing" constant="131" id="Yio-vu-HdB"/>
+                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="7Eg-Md-w3v" secondAttribute="trailing" constant="131" id="Yio-vu-HdB"/>
                                                 <constraint firstItem="7Eg-Md-w3v" firstAttribute="top" secondItem="Jug-4k-H8P" secondAttribute="topMargin" constant="3" id="u52-ha-0fj"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -657,7 +657,7 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Kuw-6q-zWY" secondAttribute="trailing" constant="18" id="0tq-8E-teF"/>
+                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="Kuw-6q-zWY" secondAttribute="trailing" constant="18" id="0tq-8E-teF"/>
                                                 <constraint firstItem="1uN-BO-q7a" firstAttribute="leading" secondItem="hok-na-LEC" secondAttribute="leadingMargin" constant="29" id="3J3-UM-yhe"/>
                                                 <constraint firstItem="Kuw-6q-zWY" firstAttribute="top" secondItem="hok-na-LEC" secondAttribute="topMargin" constant="4" id="UjK-6x-ffY"/>
                                                 <constraint firstItem="Kuw-6q-zWY" firstAttribute="centerY" secondItem="1uN-BO-q7a" secondAttribute="centerY" id="bZu-o8-jvQ"/>
